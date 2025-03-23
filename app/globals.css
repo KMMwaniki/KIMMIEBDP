@@ -1,0 +1,396 @@
+:root {
+  --pink-light: #f5b6cd;
+  --pink-medium: #f191a6;
+  --pink-dark: #f06292;
+  --orange-light: #f8c291;
+  --text-white: #ffffff;
+  --text-black: #000000;
+  --text-gray: rgba(0, 0, 0, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-inter), sans-serif;
+  color: var(--text-white);
+  background: linear-gradient(to right, var(--pink-light), var(--orange-light));
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-cinzel), serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navigation */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  z-index: 10;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-link {
+  color: var(--text-white);
+  margin-left: 1.5rem;
+  transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+  opacity: 0.8;
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
+/* Home Page */
+.home-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.content-wrapper {
+  max-width: 48rem;
+  padding-top: 4rem; /* Added padding to move content down */
+}
+
+.home-title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.home-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem; /* Added margin to create more space */
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2.5rem;
+  border-radius: 9999px;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.btn-outline {
+  border: 1px solid var(--text-white);
+  color: var(--text-white);
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-semi-transparent {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-white);
+}
+
+.btn-semi-transparent:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-pink {
+  border: 1px solid var(--pink-dark);
+  color: var(--pink-dark);
+}
+
+.btn-pink:hover {
+  background-color: var(--pink-dark);
+  color: var(--text-white);
+}
+
+/* About Page */
+.page-container {
+  min-height: 100vh;
+  padding: 4rem 1rem;
+}
+
+.about-title {
+  font-size: 3.5rem;
+  color: var(--pink-dark);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.photo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-image {
+  width: 100%;
+  max-width: 24rem;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-background {
+  width: 100%;
+  max-width: 24rem;
+  height: 400px; /* Adjust this height as needed */
+  background-image: url("/174256345382.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+/* Try alternative image paths if the above doesn't work */
+/* 
+.photo-background {
+  background-image: url('/images/174256345382.jpg');
+}
+*/
+
+/* 
+.photo-background {
+  background-image: url('/174256345825.jpg');
+}
+*/
+
+.photo-placeholder {
+  width: 100%;
+  max-width: 24rem;
+  aspect-ratio: 3 / 4;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder-text {
+  text-align: center;
+  color: var(--text-black);
+  padding: 1rem;
+}
+
+.about-content {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+}
+
+.about-text {
+  color: var(--text-black);
+  margin-bottom: 1.5rem;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Skills Page */
+.skills-container {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.skills-title {
+  font-size: 3.5rem;
+  color: var(--pink-dark);
+  margin-bottom: 2rem;
+}
+
+.skills-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+}
+
+.skills-subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--pink-dark);
+  margin-bottom: 1.5rem;
+}
+
+.skill-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: var(--text-black);
+}
+
+.skill-list li {
+  margin-bottom: 1rem;
+}
+
+.skill-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Contact Page */
+.contact-title {
+  font-size: 3.5rem;
+  color: var(--text-white);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contact-card {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 0.5rem;
+  padding: 2rem 3rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--pink-dark);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-heading svg {
+  margin-right: 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.contact-info {
+  font-size: 1.25rem;
+  color: var(--text-black);
+  transition: color 0.3s;
+}
+
+.contact-info:hover {
+  color: var(--pink-dark);
+}
+
+.contact-note {
+  font-size: 0.875rem;
+  color: var(--text-gray);
+  margin-top: 0.5rem;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* Media Queries */
+@media (min-width: 640px) {
+  .button-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .home-title {
+    font-size: 4.5rem;
+  }
+
+  .content-wrapper {
+    padding-top: 5rem; /* Increased padding for larger screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-content {
+    order: 1;
+  }
+
+  .about-photo {
+    order: 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-section {
+    align-items: flex-start;
+  }
+
+  .home-title {
+    font-size: 5rem;
+  }
+
+  .content-wrapper {
+    padding-top: 6rem; /* Increased padding for even larger screens */
+  }
+}
+
