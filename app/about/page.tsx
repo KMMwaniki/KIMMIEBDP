@@ -12,10 +12,10 @@ export default function About() {
           <div className="photo-container">
             {/* Use the correct image path */}
             <img
-              src="/1742563453825.jpg" // Path to your image in the public folder
+              src="/1742563453825.jpg" 
               alt="Kimberly Mwaniki"
               className="photo-image"
-              style={{ width: "100%", maxWidth: "24rem", borderRadius: "0.5rem" }} // Optional inline styles
+              style={{ width: "100%", maxWidth: "24rem", borderRadius: "0.5rem" }} 
             />
           </div>
 
